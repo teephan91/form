@@ -1,5 +1,15 @@
+/* Main content stylings */
 html {
     background-color: #efecd7;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_container {
+    display: flex;
+    margin: 0 331px;
 }
 
 /* Help button stylings */
