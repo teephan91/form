@@ -48,6 +48,41 @@ li {
     padding-left: 30px;
 }
 
+/* Right container stylings */
+.right_container {
+    width: 450px;
+}
+form {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 6px 6px #00000026;
+}
+
+button[type="submit"] {
+    color: white;
+    background-color: #aaaaaa;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 15px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+.acknowledgement {
+    color: #444;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+.acknowledgement a {
+    text-decoration: underline;
+    color: #089733;
+}
+
 /* Help button stylings */
 .help_btn {
     position: fixed;
