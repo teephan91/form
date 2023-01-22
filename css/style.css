@@ -55,8 +55,56 @@ li {
 form {
     font-family: 'Roboto', sans-serif;
     background-color: white;
-    padding: 30px;
+    padding: 25px;
     box-shadow: 6px 6px #00000026;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+}
+
+input {
+    appearance: none;
+    color: #00671f;
+    width: 100%;
+    border: none; 
+    border-bottom: 1px solid #e8e8e8;
+    padding: 1px 0;
+    margin-top: 10px;
+    margin-bottom: 17px;
+}
+
+input[placeholder] {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+p {
+    font-size: 13px;
+    font-weight: 300;
+    color: #aaaaaa;
+}
+
+#phone {
+    margin-bottom: 10px;
+}
+
+#phone + p {
+    margin-top: 0;
+    margin-bottom: 17px;
+}
+
+.proofhub_url_span {
+    display: flex;
+    width: 95%;
+    font-size: 13px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+#proofhub_url {
+    margin: 0;
 }
 
 button[type="submit"] {
