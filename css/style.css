@@ -1,0 +1,40 @@
+html {
+    background-color: #efecd7;
+}
+
+/* Help button stylings */
+.help_btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+
+.help_btn > button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #ff6200;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 20px;
+    font-size: 14px;
+    color: white;
+    box-shadow: 0 2px 10px -5px grey;
+}
+
+.help_btn > button:hover {
+    background-color: #eb5a00;
+}
+
+.help_btn > button:active {
+    transform: scale(95%);
+    transition: 185ms;
+    background-color: #d15000;
+}
+
+.help_btn img {
+    width: 25px;
+    height: 25px;
+    transform: scaleX(-1);
+    filter: invert(100%);
+}
