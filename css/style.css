@@ -75,10 +75,29 @@ input {
     margin-bottom: 17px;
 }
 
-input[placeholder] {
-    font-size: 16px;
-    font-weight: 300;
+.error_input {
+    border-bottom: 1px solid #e00000;
 }
+
+    /* User name input stylings  */
+    input[placeholder] {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .username_label {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .username_label span {
+        font-size: 11px;
+        font-weight: 300;
+        color: #af0000;
+    }
+
+  
 
 p {
     font-size: 13px;

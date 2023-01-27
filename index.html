@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/form.js" defer></script>
 </head>
 <body>
     <div class="main_container">
@@ -29,31 +30,57 @@
             </ul>
         </div>
         <div class="right_container">
-            <form>
+            <!-- novalidate allows for custom error messages. -->
+            <form novalidate> 
                 <div>
-                    <label for="name">Full name</label>
-                    <input type="text" id="name" name="user_name" placeholder="James Bot">
+                    <span class="username_label"><label for="name">Full name</label><span></span></span>
+                    <input type="text" 
+                           id="name" 
+                           name="user_name" 
+                           placeholder="James Bot"
+                           title="Hi! I'm Bot, James Bot. And you're?" 
+                           required>
                 </div>
                 <div>
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="user_email" placeholder="james@acme.com">
+                    <input type="email" 
+                           id="email" 
+                           name="user_email" 
+                           placeholder="james@acme.com"
+                           required>   
                 </div>
                 <div>
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="user_password" placeholder="Secure password">
+                    <input type="password" 
+                           id="password" 
+                           name="user_password" 
+                           placeholder="Secure password"
+                           required>
                 </div>
                 <div>    
                     <label for="company_name">Company Name</label>
-                    <input type="text" id="company_name" name="user_comp_name" placeholder="Acme Co.">
+                    <input type="text" 
+                           id="company_name" 
+                           name="user_comp_name" 
+                           placeholder="Acme Co."
+                           required>
                 </div>
                 <div>
                     <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="user_phone" placeholder="+1 (333) 333 4444">
+                    <input type="tel" 
+                           id="phone" 
+                           name="user_phone" 
+                           placeholder="+1 (333) 333 4444">
                     <p>We'll take your permission before calling.</p>
                 </div>
                 <div>
                     <label for="proofhub_url">ProofHub URL</label>
-                    <span class="proofhub_url_span"><input type="url" id="proofhub_url" name="proofhub_url" placeholder="acme"> .proofhub.com</span>
+                    <span class="proofhub_url_span"><input type="url" 
+                                                           id="proofhub_url" 
+                                                           name="proofhub_url" 
+                                                           placeholder="acme"
+                                                           required>
+                    .proofhub.com</span>
                     <p>This'll be a unique ProofHub web address for your company to login.</p>
                 </div>
                 <div>
