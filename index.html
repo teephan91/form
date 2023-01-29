@@ -86,11 +86,15 @@
                     <p>We'll take your permission before calling.</p>
                 </div>
                 <div>
-                    <label for="proofhub_url">ProofHub URL</label>
-                    <span class="proofhub_url_span"><input type="url" 
+                    <span class="label userurl"><label for="proofhub_url">ProofHub URL</label><span></span></span>
+                    <span class="proofhub_url_span"><input type="text" 
                                                            id="proofhub_url" 
                                                            name="proofhub_url" 
                                                            placeholder="acme"
+                                                           title="Min 3 letters, numbers, hyphens, underscores"
+                                                           minlength="3"
+                                                           maxlength="250"
+                                                           pattern="^[\w-]*$"
                                                            required>
                     .proofhub.com</span>
                     <p>This'll be a unique ProofHub web address for your company to login.</p>

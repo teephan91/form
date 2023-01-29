@@ -108,32 +108,34 @@ input {
         right: 0;
     }
 
-p {
-    font-size: 13px;
-    font-weight: 300;
-    color: #aaaaaa;
-}
+    /* Phone input stylings */
+    p {
+        font-size: 13px;
+        font-weight: 300;
+        color: #aaaaaa;
+    }
 
-#phone {
-    margin-bottom: 10px;
-}
+    #phone {
+        margin-bottom: 10px;
+    }
 
-#phone + p {
-    margin-top: 0;
-    margin-bottom: 17px;
-}
+    #phone + p {
+        margin-top: 0;
+        margin-bottom: 17px;
+    }
 
-.proofhub_url_span {
-    display: flex;
-    width: 95%;
-    font-size: 13px;
-    font-weight: 300;
-    margin-top: 10px;
-}
+    /* URL input stylings */
+    .proofhub_url_span {
+        display: flex;
+        width: 97%;
+        font-size: 13px;
+        font-weight: 300;
+        margin-top: 10px;
+    }   
 
-#proofhub_url {
-    margin: 0;
-}
+    #proofhub_url {
+        margin: 0;
+    }
 
 button[type="submit"] {
     color: white;

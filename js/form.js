@@ -11,6 +11,9 @@ const theEye = document.querySelector('.eye img');
 const userCoName = document.getElementById('company_name');
 const userCoNameLabel = document.querySelector('.userconame span');
 
+const userURL = document.getElementById('proofhub_url');
+const userURLLabel = document.querySelector('.userurl span');
+
 // Name input
 userName.addEventListener('input', () => {
     if (userName.validity.valid) {
@@ -66,6 +69,16 @@ userCoName.addEventListener('input', () => {
     }
 });
 
+// ProofHub URL input
+userURL.addEventListener('input', () => {
+    if (userURL.validity.valid) {
+        userURLLabel.textContent = "";
+        userURL.classList.remove('error_input');
+    } else {
+        showError(userURL);
+    }
+});
+
 // For all inputs
 function showError(input) {
     if (input == userName) {
@@ -91,6 +104,14 @@ function showError(input) {
             userCoNameLabel.textContent = "This field is required.";
         } else if (userCoName.validity.patternMismatch) {
             userCoNameLabel.textContent = "Special characters are not allowed!";
+        }
+    } else if (input == userURL) {
+        if (userURL.validity.valueMissing) {
+            userURLLabel.textContent = "This field is required.";
+        } else if (userURL.validity.patternMismatch) {
+            userURLLabel.textContent = "Only letters, numbers or hyphens are allowed.";
+        } else if (userURL.validity.tooShort) {
+            userURLLabel.textContent = "Please enter at least 3 characters."
         }
     }
     input.className = "error_input";
