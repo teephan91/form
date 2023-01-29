@@ -52,12 +52,18 @@
                            required>   
                 </div>
                 <div>
-                    <label for="password">Password</label>
-                    <input type="password" 
-                           id="password" 
-                           name="user_password" 
-                           placeholder="Secure password"
-                           required>
+                    <span class="label userpwd"><label for="password">Password</label><span></span></span>
+                    <span class="eye">
+                        <input type="password"
+                               id="password"
+                               name="user_password"
+                               placeholder="Secure password"
+                               title="A nice and strong password"
+                               minlength="5"
+                               maxlength="20"
+                               required>
+                        <img src="img/eye_slash.png" onclick="showPwd()" title="Show password">
+                    </span>
                 </div>
                 <div>    
                     <label for="company_name">Company Name</label>

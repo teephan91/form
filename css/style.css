@@ -97,7 +97,16 @@ input {
         color: #af0000;
     }
 
-  
+    /* Password input stylings */
+    .eye {
+        position: relative;
+    }
+
+    .eye img {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 
 p {
     font-size: 13px;
