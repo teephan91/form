@@ -33,12 +33,13 @@
             <!-- novalidate allows for custom error messages. -->
             <form novalidate> 
                 <div>
-                    <span class="username_label"><label for="name">Full name</label><span></span></span>
+                    <span class="label username"><label for="name">Full name</label><span></span></span>
                     <input type="text" 
                            id="name" 
                            name="user_name" 
                            placeholder="James Bot"
-                           title="Hi! I'm Bot, James Bot. And you're?" 
+                           title="Hi! I'm Bot, James Bot. And you're?"
+                           pattern="^[\w`!&*'.,|\\-]*$"
                            required>
                 </div>
                 <div>
