@@ -8,6 +8,9 @@ const userPwd = document.getElementById('password');
 const userPwdLabel = document.querySelector('.userpwd span');
 const theEye = document.querySelector('.eye img');
 
+const userCoName = document.getElementById('company_name');
+const userCoNameLabel = document.querySelector('.userconame span');
+
 // Name input
 userName.addEventListener('input', () => {
     if (userName.validity.valid) {
@@ -53,6 +56,16 @@ function showPwd() {
     }
 }
 
+// Company name input
+userCoName.addEventListener('input', () => {
+    if (userCoName.validity.valid) {
+        userCoNameLabel.textContent = "";
+        userCoName.classList.remove('error_input');
+    } else {
+        showError(userCoName);
+    }
+});
+
 // For all inputs
 function showError(input) {
     if (input == userName) {
@@ -60,7 +73,7 @@ function showError(input) {
             userNameLabel.textContent = "Hi! I'm Bot, James Bot. And you're?";
         } else if (userName.validity.patternMismatch) {
             userNameLabel.textContent = "Special characters are not allowed!";
-    }
+        } 
     } else if (input == userEmail) {
         if (userEmail.validity.valueMissing) {
             userEmailLabel.textContent = "This field is required.";
@@ -72,6 +85,12 @@ function showError(input) {
             userPwdLabel.textContent = "This field is required.";
         } else if (userPwd.validity.tooShort) {
             userPwdLabel.textContent = "Please enter at least 5 characters.";
+        }
+    } else if (input == userCoName) {
+        if (userCoName.validity.valueMissing) {
+            userCoNameLabel.textContent = "This field is required.";
+        } else if (userCoName.validity.patternMismatch) {
+            userCoNameLabel.textContent = "Special characters are not allowed!";
         }
     }
     input.className = "error_input";

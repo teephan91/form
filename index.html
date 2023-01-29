@@ -66,11 +66,14 @@
                     </span>
                 </div>
                 <div>    
-                    <label for="company_name">Company Name</label>
+                    <span class="label userconame"><label for="company_name">Company Name</label><span></span></span>
                     <input type="text" 
                            id="company_name" 
                            name="user_comp_name" 
                            placeholder="Acme Co."
+                           title="Company, organization or group"
+                           maxlength="250"
+                           pattern="^[\w`!&*'.,|\\-]*$"
                            required>
                 </div>
                 <div>
