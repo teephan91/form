@@ -19,6 +19,7 @@ html {
 .left_container {
     font-family: 'Roboto', sans-serif;
     width: 350px;
+    padding-top: 20px;
 }
 
 h1 {
