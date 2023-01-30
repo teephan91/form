@@ -14,13 +14,32 @@ const userCoNameLabel = document.querySelector('.userconame span');
 const userURL = document.getElementById('proofhub_url');
 const userURLLabel = document.querySelector('.userurl span');
 
+const allInputs = Array.from(document.querySelectorAll('input'));
+const continueBtn = document.querySelector('.continue_btn');
+
+function isValid() {
+    return allInputs.every((input) => input.validity.valid);
+}
+
+function checkValidity() {
+    if (isValid()) {
+        continueBtn.disabled = false;
+        continueBtn.className = "submit";
+    } else  {
+        continueBtn.disabled = true;
+        continueBtn.className = "continue_btn";
+}
+}
+
 // Name input
 userName.addEventListener('input', () => {
     if (userName.validity.valid) {
         userNameLabel.textContent = "";
         userName.classList.remove('error_input');
+        checkValidity();
     } else {
         showError(userName);
+        checkValidity();
     }
 });
 
@@ -29,8 +48,10 @@ userEmail.addEventListener('input', () => {
     if (userEmail.validity.valid) {
         userEmailLabel.textContent = "";
         userEmail.classList.remove('error_input');
+        checkValidity();
     } else {
         showError(userEmail);
+        checkValidity();
     }
 });
 
@@ -39,8 +60,10 @@ userPwd.addEventListener('input', () => {
     if (userPwd.validity.valid) {
         userPwdLabel.textContent = "";
         userPwd.classList.remove('error_input');
+        checkValidity();
     } else {
         showError(userPwd);
+        checkValidity();
     }
 });
 
@@ -64,8 +87,10 @@ userCoName.addEventListener('input', () => {
     if (userCoName.validity.valid) {
         userCoNameLabel.textContent = "";
         userCoName.classList.remove('error_input');
+        checkValidity();
     } else {
         showError(userCoName);
+        checkValidity();
     }
 });
 
@@ -74,8 +99,10 @@ userURL.addEventListener('input', () => {
     if (userURL.validity.valid) {
         userURLLabel.textContent = "";
         userURL.classList.remove('error_input');
+        checkValidity();
     } else {
         showError(userURL);
+        checkValidity();
     }
 });
 

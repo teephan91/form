@@ -137,9 +137,9 @@ input {
         margin: 0;
     }
 
-button[type="submit"] {
-    color: white;
-    background-color: #aaaaaa;
+/* Continue button stylings */
+.submit,
+.continue_btn {
     border: none;
     border-radius: 3px;
     padding: 10px 20px;
@@ -148,6 +148,18 @@ button[type="submit"] {
     letter-spacing: 1px;
 }
 
+.continue_btn {
+    cursor: not-allowed;
+    color: white;
+    background-color: #aaaaaa;
+}
+
+.submit {
+    color: white ;
+    background-color: #00a331 ;
+}
+
+/* Acknowledgement stylings */
 .acknowledgement {
     color: #444;
     font-size: 13px;
