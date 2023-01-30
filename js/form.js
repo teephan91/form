@@ -17,6 +17,7 @@ const userURLLabel = document.querySelector('.userurl span');
 const allInputs = Array.from(document.querySelectorAll('input'));
 const continueBtn = document.querySelector('.continue_btn');
 
+// For checking validity of all inputs before enabling Continue/Submit button
 function isValid() {
     return allInputs.every((input) => input.validity.valid);
 }
