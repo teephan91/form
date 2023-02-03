@@ -6,23 +6,18 @@ html {
     height: 100%;
     display: flex;
     padding: 5px;
-    /* flex-direction: column;
-    justify-content: center;
-    align-items: center; */
 }
 
 .main_container {
     display: flex;
     flex-direction: column;
     margin-top: 15px;
-    /* margin: 0 331px; */
 }
 
 /* Left container stylings */
 .left_container {
     font-family: 'Roboto', sans-serif;
     width: 100%;
-    /* padding-top: 20px; */
     text-align: center;
 }
 
@@ -37,21 +32,12 @@ h1 span {
     font-weight: 500;
 }
 
-ul {
+h1 br {
     display: none;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.75;
-    padding: 0;
-    list-style-type: none;
-    
 }
 
-li {
-    background-image: url('../img/bullet_points.png');
-    background-repeat: no-repeat;
-    background-position: 0 center;
-    padding-left: 30px;
+ul {
+    display: none;
 }
 
 /* Right container stylings */
@@ -63,7 +49,6 @@ form {
     background-color: white;
     padding: 25px;
     box-shadow: 1px 1px #00000026
-    /* box-shadow: 6px 6px #00000026; */
 }
 
 label {
@@ -183,38 +168,101 @@ input {
 /* Help button stylings */
 .help_btn {
     display: none;
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
 }
 
-.help_btn > button {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background-color: #ff6200;
-    border: none;
-    border-radius: 50px;
-    padding: 15px 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    color: white;
-    box-shadow: 0 2px 10px -5px grey;
-}
+@media only screen and (min-width: 768px) {
+    /* Main content stylings */
+    html {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-.help_btn > button:hover {
-    background-color: #eb5a00;
-}
+    .main_container {
+        flex-direction: row;
+    }
 
-.help_btn > button:active {
-    transform: scale(95%);
-    transition: 185ms;
-    background-color: #d15000;
-}
+    .help_btn {
+        display: block;
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+    }
 
-.help_btn img {
-    width: 25px;
-    height: 25px;
-    transform: scaleX(-1);
-    filter: invert(100%);
+    /* Left container stylings */
+    .left_container {
+        font-family: 'Roboto', sans-serif;
+        width: 80%;
+        padding: 20px;
+        text-align: left;
+    }
+    
+    h1 {
+        font-weight: 300;
+        font-size: 23px;
+        line-height: 1.5;
+        margin-bottom: 35px;
+    }
+    
+    h1 span {
+        font-weight: 500;
+    }
+
+    h1 br {
+        display: block;
+    }
+    
+    ul {
+        display: block;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.75;
+        padding: 0;
+        list-style-type: none;
+        
+    }
+    
+    li {
+        background-image: url('../img/bullet_points.png');
+        background-repeat: no-repeat;
+        background-position: 0 center;
+        padding-left: 30px;
+    }
+    
+    /* Right container stylings */
+    form {
+        box-shadow: 6px 6px #00000026;
+    }
+
+    /* Help button stylings */
+    .help_btn > button {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background-color: #ff6200;
+        border: none;
+        border-radius: 50px;
+        padding: 15px 20px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        color: white;
+        box-shadow: 0 2px 10px -5px grey;
+    }
+    
+    .help_btn > button:hover {
+        background-color: #eb5a00;
+    }
+    
+    .help_btn > button:active {
+        transform: scale(95%);
+        transition: 185ms;
+        background-color: #d15000;
+    }
+    
+    .help_btn img {
+        width: 25px;
+        height: 25px;
+        transform: scaleX(-1);
+        filter: invert(100%);
+    }
 }
