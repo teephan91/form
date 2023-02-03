@@ -182,18 +182,11 @@ input {
         flex-direction: row;
     }
 
-    .help_btn {
-        display: block;
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
-    }
-
     /* Left container stylings */
     .left_container {
         font-family: 'Roboto', sans-serif;
         width: 80%;
-        padding: 20px;
+        padding-top: 20px;
         text-align: left;
     }
     
@@ -235,6 +228,13 @@ input {
     }
 
     /* Help button stylings */
+    .help_btn {
+        display: block;
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+    }
+
     .help_btn > button {
         display: flex;
         align-items: center;
@@ -264,5 +264,15 @@ input {
         height: 25px;
         transform: scaleX(-1);
         filter: invert(100%);
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    .left_container {
+        width: 350px;
+    }
+
+    .right_container {
+        width: 450px;
     }
 }
