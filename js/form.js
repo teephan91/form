@@ -59,7 +59,7 @@ function showError(input) {
     } else if (input.id === 'email') {
         if (input.validity.valueMissing) {
             input.previousElementSibling.lastChild.textContent = "This field is required.";
-        } else if (input.validity.typeMismatch) {
+        } else if (input.validity.patternMismatch) {
             input.previousElementSibling.lastChild.textContent = "Please enter a valid email address.";
         }
     } else if (input.id === 'password') {
