@@ -33,7 +33,7 @@
             <!-- novalidate allows for custom error messages. -->
             <form novalidate> 
                 <div>
-                    <span class="label username"><label for="name">Full name</label><span></span></span>
+                    <label for="name">Full name <span></span></label>
                     <input type="text" 
                            id="name" 
                            name="user_name" 
@@ -43,7 +43,7 @@
                            required>
                 </div>
                 <div>
-                    <span class="label useremail"><label for="email">Email</label><span></span></span>
+                    <label for="email">Email <span></span></label>
                     <input type="email" 
                            id="email" 
                            name="user_email" 
@@ -52,9 +52,8 @@
                            required>   
                 </div>
                 <div>
-                    <span class="label userpwd"><label for="password">Password</label><span></span></span>
-                    <span class="eye">
-                        <input type="password"
+                    <label for="password">Password <span></span></label>
+                    <input type="password"
                                id="password"
                                name="user_password"
                                placeholder="Secure password"
@@ -62,11 +61,10 @@
                                minlength="5"
                                maxlength="20"
                                required>
-                        <img src="img/eye_slash.png" onclick="showPwd()" title="Show password">
-                    </span>
+                    <img class="eye" src="img/eye_slash.png" onclick="showPwd()" title="Show password">
                 </div>
                 <div>    
-                    <span class="label userconame"><label for="company_name">Company Name</label><span></span></span>
+                    <label for="company_name">Company Name <span></span></label>
                     <input type="text" 
                            id="company_name" 
                            name="user_comp_name" 
@@ -85,18 +83,18 @@
                            title="Country code, phone and extension">
                     <p>We'll take your permission before calling.</p>
                 </div>
-                <div>
-                    <span class="label userurl"><label for="proofhub_url">ProofHub URL</label><span></span></span>
-                    <span class="proofhub_url_span"><input type="text" 
-                                                           id="proofhub_url" 
-                                                           name="proofhub_url" 
-                                                           placeholder="acme"
-                                                           title="Min 3 letters, numbers, hyphens, underscores"
-                                                           minlength="3"
-                                                           maxlength="250"
-                                                           pattern="^[\w-]*$"
-                                                           required>
-                    .proofhub.com</span>
+                <div class="div_url">
+                    <label for="proofhub_url">ProofHub URL <span></span></label>
+                    <input type="text" 
+                            id="proofhub_url" 
+                            name="proofhub_url" 
+                            placeholder="acme"
+                            title="Min 3 letters, numbers, hyphens, underscores"
+                            minlength="3"
+                            maxlength="250"
+                            pattern="^[\w-]*$"
+                            required>
+                    <p class="url">.proofhub.com</p>
                     <p>This'll be a unique ProofHub web address for your company to login.</p>
                 </div>
                 <div>

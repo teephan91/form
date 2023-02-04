@@ -77,13 +77,13 @@ input {
         font-weight: 300;
     }
 
-    .label {
+    label {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
     }
 
-    .label span {
+    label span {
         font-size: 11px;
         font-weight: 300;
         color: #af0000;
@@ -92,12 +92,8 @@ input {
     /* Password input stylings */
     .eye {
         position: relative;
-    }
-
-    .eye img {
-        position: absolute;
-        top: 0;
-        right: 0;
+        float: right;
+        margin-top: -35px;
     }
 
     /* Phone input stylings */
@@ -117,16 +113,22 @@ input {
     }
 
     /* URL input stylings */
-    .proofhub_url_span {
-        display: flex;
-        width: 97%;
+    .div_url {
+        position: relative;
+    }
+
+    .url {
+        position: absolute;
+        right: 15px;
+        top: 15px;
         font-size: 13px;
-        font-weight: 300;
-        margin-top: 10px;
-    }   
+        color: black;
+    }
 
     #proofhub_url {
         margin: 0;
+        width: 72%;
+        margin-top: 10px;
     }
 
 /* Continue button stylings */
